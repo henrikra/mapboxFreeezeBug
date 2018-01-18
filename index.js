@@ -5,5 +5,5 @@ import { registerScreens } from './screens';
 registerScreens(); // this is where you register all of your app's screens
 
 Navigation.startSingleScreenApp({
-  screen: { screen: 'Home', navigatorStyle: { navBarHidden: true } },
+  screen: { screen: 'Home', navigatorStyle: { navBarHidden: true }, overrideBackPress: true, },
 });
