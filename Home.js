@@ -13,13 +13,11 @@ class TestBug extends Component {
           style={{ flex: 1 }}
           centerCoordinate={[24.9284942, 60.1670202]}
           zoomLevel={12}
-          ref={(map) => {
-            this.map = map;
-          }}
         />
         <TouchableOpacity onPress={() => this.props.navigator.showModal({
-          screen: 'SecondScreen'
-        })} style={{height: 100}}>
+          screen: 'SecondScreen',
+          navigatorStyle: { navBarHidden: true }
+        })} style={{height: 100, width: 100, backgroundColor: 'red', position: 'absolute', bottom: 20, right: 20}}>
           <Text>New screen</Text>
         </TouchableOpacity>
       </View>
