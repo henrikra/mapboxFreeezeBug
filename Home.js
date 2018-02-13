@@ -15,6 +15,12 @@ class TestBug extends Component {
           zoomLevel={12}
         />
         <TouchableOpacity onPress={() => this.props.navigator.showModal({
+          screen: 'ScreenWithTextInput',
+          navigatorStyle: { navBarHidden: true }
+        })} style={{height: 100, width: 100, backgroundColor: 'blue', position: 'absolute', bottom: 20, left: 20}}>
+          <Text>Screen with TextInput</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigator.showModal({
           screen: 'SecondScreen',
           navigatorStyle: { navBarHidden: true }
         })} style={{height: 100, width: 100, backgroundColor: 'red', position: 'absolute', bottom: 20, right: 20}}>
